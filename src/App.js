@@ -1,10 +1,23 @@
 import styled from 'styled-components';
 import NavBar from './Components/NavBar';
+import { Switch, Route } from 'react-router-dom' 
+import Home from './Components/Home';
+import Search from './Components/Search';
+import AboutUs from './Components/AboutUs';
+import HowItWorks from './Components/HowItWorks';
+import Contacts from './Components/Contacts';
 
 function App() {
   return (
     <AppContainer>
       <NavBar/>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/search" component={Search}/>
+        <Route path="/about" component={AboutUs}/>
+        <Route path="/howitworks" component={HowItWorks}/>
+        <Route path="/contacts" component={Contacts}/>
+      </Switch>
     </AppContainer>
   );
 }
