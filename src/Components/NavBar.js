@@ -8,7 +8,7 @@ function NavBar() {
     <Navbar className="p-2 text-white">
       <div className="w-full mx-auto px-4">
         <div className="flex flex-wrap items-center justify-center md:justify-start">
-          <Link to="/" className="logo mr-4">
+          <Link to="/" className="logo mr-0 md:mr-4">
             <img src={ logo } alt="logo"/>
           </Link>
           <ul className="flex flex-wrap justify-center text-center">
@@ -41,10 +41,9 @@ const Navbar = styled.nav `
     width: 40px;
   };
 
-  ul li a {
+  ul li {
     padding: 0.5rem 1rem;
   }
 `;
 
-
-export default NavBar
+export default NavBar;
