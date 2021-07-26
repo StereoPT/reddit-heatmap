@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
-import { Switch, Route } from 'react-router-dom' 
-import Home from './Components/Home';
-import Search from './Components/Search';
-import AboutUs from './Components/AboutUs';
-import HowItWorks from './Components/HowItWorks';
-import Contacts from './Components/Contacts';
+import { Switch, Route } from 'react-router-dom';
+
+// Pages
+import Home from './Pages/Home';
+import Search from './Pages/Search';
+import AboutUs from './Pages/AboutUs';
+import HowItWorks from './Pages/HowItWorks';
+import Contacts from './Pages/Contacts';
 
 function App() {
   return (
