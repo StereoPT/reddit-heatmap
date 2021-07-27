@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../Images/Reddit-icon.png';
 
 function NavBar() {
+  const location = useLocation();
+
   return (
     <Navbar className="p-2 text-white shadow-md sticky top-0">
       <div className="w-full mx-auto px-4">
@@ -18,15 +20,18 @@ function NavBar() {
             <li>
               <Link to="/search">Search</Link>
             </li>
-            <li>
-              <a href="#about-us">About Us</a>
-            </li>
-            <li>
-              <a href="#how-it-works">How It Works</a>
-            </li>
-            <li>
-              <a href="#contacts">Contacts</a>
-            </li>
+            { location.pathname === "/" ?
+              <li>
+                <a href="#about-us">About Us</a>
+              </li> : ''}
+            { location.pathname === "/" ?
+              <li>
+                <a href="#how-it-works">How It Works</a>
+              </li> : ''}
+            { location.pathname === "/" ?
+              <li>
+                <a href="#contacts">Contacts</a>
+              </li> : ''}
           </ul>
         </div>
       </div>
