@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import logo from '../Images/Reddit-icon.png'
+import logo from '../images/Reddit-icon.png'
 
 
 function Footer() {
   return (
-    <FooterBar className="p-2 text-white">
+    <FooterBar className="mt-4 p-2 text-white">
       <div className="w-full mx-auto px-2">
         <div className="flex flex-wrap items-center justify-evenly">
           <div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import logo from '../Images/Reddit-icon.png';
+import logo from '../images/Reddit-icon.png';
 
 function NavBar() {
   return (
-    <Navbar className="p-2 text-white">
+    <Navbar className="p-2 text-white shadow-md sticky top-0">
       <div className="w-full mx-auto px-4">
         <div className="flex flex-wrap items-center justify-center md:justify-start">
           <Link to="/" className="logo mr-0 md:mr-4">
@@ -19,13 +19,13 @@ function NavBar() {
               <Link to="/search">Search</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <a href="#about-us">About Us</a>
             </li>
             <li>
-              <Link to="/howitworks">How It Works</Link>
+              <a href="#how-it-works">How It Works</a>
             </li>
             <li>
-              <Link to="/contacts">Contacts</Link>
+              <a href="#contacts">Contacts</a>
             </li>
           </ul>
         </div>
@@ -36,7 +36,6 @@ function NavBar() {
 
 const Navbar = styled.nav `
   background-color: #212529;
-
   .logo{
     width: 40px;
   };

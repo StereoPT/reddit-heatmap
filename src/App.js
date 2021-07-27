@@ -6,23 +6,15 @@ import { Switch, Route } from 'react-router-dom';
 // Pages
 import Home from './Pages/Home';
 import Search from './Pages/Search';
-import AboutUs from './Pages/AboutUs';
-import HowItWorks from './Pages/HowItWorks';
-import Contacts from './Pages/Contacts';
 
 function App() {
   return (
     <AppContainer>
       <NavBar/>
-      <div className="h-full">
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/search" component={Search}/>
-          <Route path="/about" component={AboutUs}/>
-          <Route path="/howitworks" component={HowItWorks}/>
-          <Route path="/contacts" component={Contacts}/>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/search" component={Search}/>
+      </Switch>
       <Footer/>
     </AppContainer>
   );
