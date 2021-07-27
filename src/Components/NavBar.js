@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import logo from '../images/Reddit-icon.png';
+import logo from '../Images/Reddit-icon.png';
 
 function NavBar() {
   return (
@@ -36,7 +36,8 @@ function NavBar() {
 
 const Navbar = styled.nav `
   background-color: #212529;
-  .logo{
+
+  .logo {
     width: 40px;
   };
 
