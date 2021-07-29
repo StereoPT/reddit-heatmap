@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
+import { SearchConsumer } from '../Store/Context';
 
 function SearchSection({ search }) {
   const [ subreddit, setSubreddit ] = useState(search ?? '');
 
   function subredditChange(event) {
     setSubreddit(event.target.value);
-  }
-
-  function searchSubreddit() {
-    console.log(subreddit);
   }
 
   return (
@@ -22,13 +19,18 @@ function SearchSection({ search }) {
           value={ subreddit }
           onChange={ subredditChange }
         />
-        <button
-          type="button"
-          className="bg-yellow-400 px-4 py-2 text-lg text-white rounded-r-lg border-2 border-l-0"
-          onClick={ searchSubreddit }
-        >
-          Search
-        </button>
+        <SearchConsumer>
+          {value => (
+            <button
+              type="button"
+              className="bg-yellow-400 px-4 py-2 text-lg text-white rounded-r-lg border-2 border-l-0"
+              onClick={() => value.setSearch(subreddit)}
+            >
+              Search
+            </button>
+            )
+          } 
+        </SearchConsumer>
       </div>
     </div>
   );
